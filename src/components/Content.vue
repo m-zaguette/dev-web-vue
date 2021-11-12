@@ -29,9 +29,3 @@
 
 
 </script>
-
-<style scoped lang="scss">
-  .src-components-content {
-
-  }
-</style>

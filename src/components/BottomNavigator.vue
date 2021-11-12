@@ -1,24 +1,36 @@
 <template lang="html">
+  <section class="BottomNavigator">
+    <v-bottom-navigation v-model="value">
+      <v-btn value="web">
+        <span>Web</span>
 
-  <section class="src-components-bottom-navigator">
-    <h1>src-components-bottom-navigator Component</h1>
+        <v-icon>mdi-web</v-icon>
+      </v-btn>
+
+      <v-btn value="mobile">
+        <span>Mobile</span>
+
+        <v-icon>mdi-cellphone</v-icon>
+      </v-btn>
+
+      <v-btn value="recent">
+        <span>Recent</span>
+
+        <v-icon>mdi-history</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
   </section>
-
 </template>
 
 <script lang="js">
 
   export default  {
-    name: 'src-components-bottom-navigator',
+    name: 'BottomNavigator',
     props: [],
     mounted () {
 
     },
-    data () {
-      return {
-
-      }
-    },
+    data: () => ({ value: 'web' }),
     methods: {
 
     },
@@ -29,9 +41,3 @@
 
 
 </script>
-
-<style scoped lang="scss">
-  .src-components-bottom-navigator {
-
-  }
-</style>

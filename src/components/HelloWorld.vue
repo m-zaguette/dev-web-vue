@@ -24,8 +24,9 @@
           >Discord Community</a>
         </p>
       </v-col>
-
-      <v-col
+    </v-row>
+    
+      <!-- <v-col
         class="mb-5"
         cols="12"
       >
@@ -86,8 +87,7 @@
             {{ eco.text }}
           </a>
         </v-row>
-      </v-col>
-    </v-row>
+      </v-col> -->
   </v-container>
 </template>
 
