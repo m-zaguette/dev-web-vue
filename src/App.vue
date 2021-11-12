@@ -28,7 +28,6 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-// import ToolBar from './components/Toolbar';
 import SystemBar from './components/SystemBar';
 import AppBar from './components/AppBar';
 import BottomNavigator from './components/BottomNavigator';
@@ -42,7 +41,6 @@ export default {
     HelloWorld
     ,SystemBar
     ,AppBar
-    // ,ToolBar
     // ,NavigationBar
     ,BottomNavigator
     ,Footer

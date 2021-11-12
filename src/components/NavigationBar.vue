@@ -1,6 +1,10 @@
 <template lang="html">
 
   <section class="NavigationBar">
+    <v-card
+      height="500"
+      width="344"
+    >
       <v-navigation-drawer
         v-model="drawer"
         :mini-variant.sync="mini"
@@ -39,14 +43,15 @@
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
+      <h1>Gabriel Barbosa - VULGOOOOOO GABIGOL</h1>
+    </v-card>
   </section>
-
 </template>
 
 <script lang="js">
-
   export default  {
     name: 'NavigationBar',
+    
     props: [],
     mounted () {
 
@@ -59,7 +64,7 @@
           { title: 'My Account', icon: 'mdi-account' },
           { title: 'Users', icon: 'mdi-account-group-outline' },
         ],
-        mini: false,
+        mini: true,
       }
     },
     methods: {
@@ -69,6 +74,4 @@
 
     }
 }
-
-
 </script>
