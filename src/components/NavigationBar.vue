@@ -1,50 +1,22 @@
 <template lang="html">
 
   <section class="NavigationBar">
-    <v-card
-      height="500"
-      width="344"
-    >
-      <v-navigation-drawer
-        v-model="drawer"
-        :mini-variant.sync="mini"
+    <v-navigation-drawer
+        color="#09151E"
         permanent
-      >
-        <v-list-item class="px-2">
-          <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
-          </v-list-item-avatar>
-
-          <v-list-item-title>John Leider</v-list-item-title>
-
-          <v-btn
-            icon
-            @click.stop="mini = !mini"
-          >
-            <v-icon>mdi-chevron-left</v-icon>
-          </v-btn>
-        </v-list-item>
-
+        expand
+        app
+    >
         <v-divider></v-divider>
-
-        <v-list dense>
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            link
-          >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+        <v-list nav dense>
+            <v-list-item link href="#">
+                <v-list-item-icon>
+                    <v-icon color="white" small>mdi-lightbulb</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">Blue</v-list-item-title>
+            </v-list-item>
         </v-list>
-      </v-navigation-drawer>
-      <h1>Gabriel Barbosa - VULGOOOOOO GABIGOL</h1>
-    </v-card>
+    </v-navigation-drawer>
   </section>
 </template>
 

@@ -5,7 +5,7 @@
       flat
       tile
     >
-        <SystemBar/>
+      <SystemBar/>
     </div>
     <v-card
       class="d-flex"
@@ -18,7 +18,7 @@
     </v-card>
   
     <v-main>
-      <!-- <NavigationBar/> -->
+      <NavigationBar/>
       <HelloWorld/>
     </v-main>
     <Footer/>
@@ -32,7 +32,7 @@ import SystemBar from './components/SystemBar';
 import AppBar from './components/AppBar';
 import BottomNavigator from './components/BottomNavigator';
 import Footer from './components/Footer';
-// import NavigationBar from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 
 export default {
   name: 'App',
@@ -41,7 +41,7 @@ export default {
     HelloWorld
     ,SystemBar
     ,AppBar
-    // ,NavigationBar
+    ,NavigationBar
     ,BottomNavigator
     ,Footer
   },
