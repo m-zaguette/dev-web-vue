@@ -16,11 +16,18 @@
         <AppBar/>
       </v-app-bar>
     </v-card>
-  
-    <v-main>
-      <NavigationBar/>
-      <HelloWorld/>
-    </v-main>
+    <v-card
+      height="100%"
+    >
+      <v-layout
+        
+      >
+        <SideBar/>
+      </v-layout>
+      <v-layout>
+        <HelloWorld/>
+      </v-layout>
+    </v-card>
     <Footer/>
   <BottomNavigator/>
   </v-app>
@@ -32,7 +39,7 @@ import SystemBar from './components/SystemBar';
 import AppBar from './components/AppBar';
 import BottomNavigator from './components/BottomNavigator';
 import Footer from './components/Footer';
-import NavigationBar from './components/NavigationBar';
+import SideBar from './components/SideBar';
 
 export default {
   name: 'App',
@@ -41,7 +48,7 @@ export default {
     HelloWorld
     ,SystemBar
     ,AppBar
-    ,NavigationBar
+    ,SideBar
     ,BottomNavigator
     ,Footer
   },

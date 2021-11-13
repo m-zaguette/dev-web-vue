@@ -1,11 +1,12 @@
 <template lang="html">
 
-  <section class="NavigationBar">
+  <section class="SideBar">
     <v-navigation-drawer
-        color="#09151E"
-        permanent
-        expand
-        app
+      clipped
+      color="#09151E"
+      height
+      expand
+      sidebar
     >
         <v-divider></v-divider>
         <v-list nav dense>
@@ -22,7 +23,7 @@
 
 <script lang="js">
   export default  {
-    name: 'NavigationBar',
+    name: 'SideBar',
     
     props: [],
     mounted () {
