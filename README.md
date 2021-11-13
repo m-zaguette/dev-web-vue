@@ -1,5 +1,14 @@
 # dev-web-vue
 
+## Objetivo
+O objetivo desse projeto é desenvolver uma página utilizando o Vuetify e o wireframe desenvolvido pelo professor.
+
+![Wireframe](./wireframe.png)
+
+Utilizando a documentação e pesquisando foi possível chegar nesse resultado:
+
+![Wireframe](./print_completo.png)
+
 ## Project setup
 ```
 npm install

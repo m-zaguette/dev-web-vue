@@ -35,11 +35,11 @@
     data: () => ({
       links: [
         'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us',
+        'Sobre nós',
+        'Time',
+        'Serviços',
+        'Blogueirinhos',
+        'Entre em contato',
       ],
     }),
     methods: {

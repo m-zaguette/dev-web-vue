@@ -18,15 +18,16 @@
     </v-card>
     <v-card
       height="100%"
+      class="d-flex inline"
     >
-      <v-layout
-        
-      >
+      <v-layout fill-height>
         <SideBar/>
       </v-layout>
-      <v-layout>
+      <v-layout fill-height align-center>
         <HelloWorld/>
       </v-layout>
+        
+      
     </v-card>
     <Footer/>
   <BottomNavigator/>

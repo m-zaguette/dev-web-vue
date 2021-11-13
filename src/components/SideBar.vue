@@ -3,8 +3,6 @@
   <section class="SideBar">
     <v-navigation-drawer
       clipped
-      color="#09151E"
-      height
       expand
       sidebar
     >
@@ -12,9 +10,9 @@
         <v-list nav dense>
             <v-list-item link href="#">
                 <v-list-item-icon>
-                    <v-icon color="white" small>mdi-lightbulb</v-icon>
+                    <v-icon color="black" small>mdi-lightbulb</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title class="title">Blue</v-list-item-title>
+                <v-list-item-title class="title">SideBar</v-list-item-title>
             </v-list-item>
         </v-list>
     </v-navigation-drawer>
