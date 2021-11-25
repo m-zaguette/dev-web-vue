@@ -20,13 +20,38 @@
       <v-spacer></v-spacer>
 
       <v-btn
+        href="https://github.com"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-git</v-icon>
+      </v-btn>
+      
+
+      <v-btn
+        href="https://stackoverflow.com"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-stack-overflow</v-icon>
+      </v-btn>
+      
+      <v-btn
+        href="https://youtube.com"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-youtube</v-icon>
+      </v-btn>
+      
+      <v-btn
         href="https://google.com"
         target="_blank"
         text
       >
-        <span class="mr-2">Abrir o Google</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon>mdi-google</v-icon>
       </v-btn>
+
     </v-app-bar>
   </section>
 </template>
