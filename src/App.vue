@@ -20,9 +20,11 @@
       height="100%"
       class="d-flex inline"
     >
-      <v-layout fill-height>
-        <SideBar/>
-      </v-layout>
+      <v-flex>
+          <v-layout fill-height>
+            <SideBar/>
+          </v-layout>
+      </v-flex>
       <v-layout fill-height align-center>
           <router-view/>
       </v-layout>
