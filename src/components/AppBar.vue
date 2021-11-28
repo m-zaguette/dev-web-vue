@@ -18,6 +18,41 @@
       </div>
 
       <v-spacer></v-spacer>
+      
+      <v-btn
+        href="/"
+        text
+      >
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+
+      <v-btn
+        href="/careers"
+        text
+      >
+        <v-icon>mdi-briefcase</v-icon>
+      </v-btn>
+
+      <v-btn
+        href="/contact"
+        text
+      >
+        <v-icon>mdi-cellphone</v-icon>
+      </v-btn>
+
+      <v-btn
+        href="/about"
+        text
+      >
+        <v-icon>mdi-plus</v-icon>
+      </v-btn>
+
+      <v-btn
+        href="/products"
+        text
+      >
+        <v-icon>mdi-store</v-icon>
+      </v-btn>
 
       <v-btn
         href="https://github.com"

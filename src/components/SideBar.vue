@@ -38,11 +38,40 @@
                 </v-list-item-icon>
                 <v-list-item-title class="title">Google</v-list-item-title>
             </v-list-item>
+            <v-list-item link href="/">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-home</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">Home</v-list-item-title>
+            </v-list-item>
+            <v-list-item link href="/careers">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-briefcase</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">Careers</v-list-item-title>
+            </v-list-item>
+            <v-list-item link href="/contact">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-cellphone</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">Contact</v-list-item-title>
+            </v-list-item>
+            <v-list-item link href="/about">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-plus</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">About</v-list-item-title>
+            </v-list-item>
+            <v-list-item link href="/products">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-store</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">Products</v-list-item-title>
+            </v-list-item>
         </v-list>
     </v-navigation-drawer>
   </section>
 </template>
-
 <script lang="js">
   export default  {
     name: 'SideBar',

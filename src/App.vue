@@ -24,7 +24,7 @@
         <SideBar/>
       </v-layout>
       <v-layout fill-height align-center>
-        <HelloWorld/>
+          <router-view/>
       </v-layout>
         
       
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 import SystemBar from './components/SystemBar';
 import AppBar from './components/AppBar';
 import BottomNavigator from './components/BottomNavigator';
@@ -46,8 +45,7 @@ export default {
   name: 'App',
 
   components: {
-    HelloWorld
-    ,SystemBar
+    SystemBar
     ,AppBar
     ,SideBar
     ,BottomNavigator
