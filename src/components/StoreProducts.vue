@@ -41,7 +41,7 @@
         </v-row>
 
         <div class="my-4 text-subtitle-1">
-          $ • Italian, Cafe
+          $ • Cafe
         </div>
 
         <div>{{restaurantDescription}}</div>
@@ -77,7 +77,7 @@
       return {
 
       }
-    }
+    },
 }
 
 
