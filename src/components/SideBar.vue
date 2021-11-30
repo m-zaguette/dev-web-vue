@@ -68,6 +68,12 @@
                 </v-list-item-icon>
                 <v-list-item-title class="title">Products</v-list-item-title>
             </v-list-item>
+            <v-list-item link href="/cep">
+                <v-list-item-icon>
+                    <v-icon color="black" small>mdi-map</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="title">CEP</v-list-item-title>
+            </v-list-item>
         </v-list>
     </v-navigation-drawer>
   </section>

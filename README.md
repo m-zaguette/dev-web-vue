@@ -246,6 +246,34 @@ Para a AF2 serão alguns objetivos a serem cumpridos, como:
         </script>
     ```
 
+## AF3
+- VUEX instalado e utilizando no App.vue
+
+- Uso de uma função getter para interação com a Store.
+
+- Uso de uma função mutations para interação com a Store.
+
+- Uso de uma função actions para interação com a Store.
+
+- Uso de algum método dos existentes no ciclo de vida do Vue.
+
+- Utilização do fetch ou axios para interação com API externa.
+
+- Utilizar os dados consumidos da API externa para criar uma Grid, Table ou layout com Cards que mostrem os dados da requisição. 
+
+## Prints de como ficaram as telas
+
+- VUEX instalado e utilizando no App.vue
+    - Código retirado do arquivo
+    ```@/App.vue```
+    
+
+Foi escolhido como API externa para consumo a API do ViaCEP.
+Seguindo o padrão: 
+```
+https://viacep.com.br/ws/${CEP}/json/
+```
+
 ## Project setup
 ```
 npm install

@@ -55,6 +55,13 @@
       </v-btn>
 
       <v-btn
+        href="/cep"
+        text
+      >
+        <v-icon>mdi-map</v-icon>
+      </v-btn>
+
+      <v-btn
         href="https://github.com"
         target="_blank"
         text
@@ -62,7 +69,6 @@
         <v-icon>mdi-git</v-icon>
       </v-btn>
       
-
       <v-btn
         href="https://stackoverflow.com"
         target="_blank"

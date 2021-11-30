@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import Careers from '../views/Careers.vue'
 import Contact from '../views/Contact.vue'
 import Products from '../views/Products.vue'
+import CEP from '../views/Cep.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/products',
     name: 'Products',
     component: Products
+  },
+  {
+    path: '/cep',
+    name: 'CEP',
+    component: CEP
   },
 ]
 

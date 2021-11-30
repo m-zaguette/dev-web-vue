@@ -3,6 +3,7 @@
   <div>
     <h1>{{bigTitle}}</h1>
     <h3>{{applicationTitle}}</h3>
+    
     <v-row>
       <v-col
         v-for="(n,i) in 8"
@@ -30,9 +31,9 @@
     components:{
       StoreProducts
     },
-    data () {
-      return {}
-    },
+    data: () => ({
+      
+    }),
     computed:{
       myCards(){
         return this.$store.state.restaurants
