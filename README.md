@@ -263,16 +263,85 @@ Para a AF2 serão alguns objetivos a serem cumpridos, como:
 
 ## Prints de como ficaram as telas
 
-- VUEX instalado e utilizando no App.vue
-    - Código retirado do arquivo
-    ```@/App.vue```
-    
+- Uso de uma função getter para interação com a Store.
+    - Pedaço do Código retirado do arquivo ``` @/store/index.js```
+    ```
+    state:{
+    titleView:"Restaurantes em sua região:",
+    bigTitle: "Restaurantes",
+    cepTitle: "titulo cep",
+    ...
+    ...
+    ...
+    getters: {
+        bigTitle(state){
+            return state.cepTitle.toUpperCase()
+        }
+    },
+    ```
+    Dessa maneira quando chamado na página CEP: Pedaço do Código retirado do arquivo ``` @/views/Cep.vue```
+    ```
+    <h1>{{cepTitle}}</h1>
+    <h1>Pesquise o CEP:</h1>
+    ...
+    ...
+    ...
+    computed: {
+      dataCep(){
+        return this.$store.state.dataCep
+      },
+      cepTitle(){
+        return this.$store.getters.bigTitle
+      }
+    }
+    ```
+    Na página o título fica assim:
+    ![CEP Title](./cep_title.jpg)
 
-Foi escolhido como API externa para consumo a API do ViaCEP.
-Seguindo o padrão: 
-```
-https://viacep.com.br/ws/${CEP}/json/
-```
+- Uso de uma função mutations para interação com a Store.
+- Uso de uma função actions para interação com a Store.
+
+    - Irei demonstrar o uso das mutations e das actions no mesmo pedaço de código, pois estão no mesmo arquivo ``` @/store/index.js ```
+    ```
+    mutations:{
+        SET_DATA(state, data){
+        state.dataCep.push(data);
+        }
+    },
+    actions:{
+        fetchData({commit}, cep){
+        console.log(commit);
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(res=>{
+            commit('SET_DATA',res.data);
+            })
+            .catch(err=>{
+            console.log(err);
+            })
+        }
+    },
+    ```
+
+- Uso de algum método dos existentes no ciclo de vida do Vue.
+    - Foi optado por utilizar o método create:
+    Código retirado do arquivo ``` @/views/Cep.vue```
+    ```
+    async created(){
+      this.$store.dispatch('fetchData','25610320');
+    }
+    ```
+    ![CEP Created](./cep_title.jpg)
+    
+- Utilização do fetch ou axios para interação com API externa.
+
+- Utilizar os dados consumidos da API externa para criar uma Grid, Table ou layout com Cards que mostrem os dados da requisição. 
+
+    - Foi escolhido como API externa para consumo a API do ViaCEP.
+    Seguindo o padrão: 
+    ```
+    https://viacep.com.br/ws/${CEP}/json/
+    ```
+    ![CEP Cards](./cep_cards.jpg)
 
 ## Project setup
 ```

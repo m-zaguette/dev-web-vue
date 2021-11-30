@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -7,6 +8,7 @@ export default new Vuex.Store({
   state:{
     titleView:"Restaurantes em sua região:",
     bigTitle: "Restaurantes",
+    cepTitle: "titulo cep",
     restaurants: [
       {
        text: 'Pasta da Itália',
@@ -56,10 +58,31 @@ export default new Vuex.Store({
        nRating: 40,
        description: 'III'
       }
-    ]
+    ],
+    dataCep: []
   },
-  mutations:{},
-  actions:{},
-  getters: {},
+  mutations:{
+    SET_DATA(state, data){
+      state.dataCep.push(data);
+    }
+  },
+  actions:{
+    fetchData({commit}, cep){
+      console.log(commit);
+      console.log(cep);
+      axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(res=>{
+          commit('SET_DATA',res.data);
+        })
+        .catch(err=>{
+          console.log(err);
+        })
+    }
+  },
+  getters: {
+    bigTitle(state){
+      return state.cepTitle.toUpperCase()
+    }
+  },
 })
 

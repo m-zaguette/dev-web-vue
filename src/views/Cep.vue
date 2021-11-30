@@ -1,6 +1,7 @@
 <template lang="html">
 
   <div>
+    <h1>{{cepTitle}}</h1>
     <h1>Pesquise o CEP:</h1>
     <v-text-field
       :rules="rules"
@@ -36,7 +37,7 @@
 </template>
 
 <script lang="js">
-  import axios from 'axios'
+  // import axios from 'axios'
   import CEPCard from '../components/CEPCard.vue'
 
   export default  {
@@ -46,10 +47,8 @@
       CEPCard
     },
     mounted () {
-
     },
     data: () => ({
-      dataCep : [],
       cep: null,
       rules: [
         value => !!value || 'Required.',
@@ -57,20 +56,20 @@
       ],
     }),
     computed: {
-
+      dataCep(){
+        return this.$store.state.dataCep
+      },
+      cepTitle(){
+        return this.$store.getters.bigTitle
+      }
     },    
     methods:{
       fetch(){
-        console.log(this.cep);
-        axios.get(`https://viacep.com.br/ws/${this.cep}/json/`)
-        .then(res=>{
-          this.dataCep.push(res.data);
-          console.log(this.dataCep.length);
-        })
-        .catch(err=>{
-          console.log(err);
-        })
-      }
+        this.$store.dispatch('fetchData',this.cep);
+      }      
+    },
+    async created(){
+      this.$store.dispatch('fetchData','25610320');
     }
 }
 
